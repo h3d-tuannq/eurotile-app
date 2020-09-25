@@ -177,16 +177,16 @@ function MyTabBar(props) {
 
   return (
     <View>
-      {!(
-        state.index == 1  &&
-        state.routes[1] &&
-        state.routes[1].state &&
-        state.routes[1].state.routes &&
-        state.routes[1].state.routes[state.routes[1].state.index].state.index == 1) ? (
-        <MiniPlayer item={props.item} />
-      ) : (
-        <View />
-      )}
+      {/*{!(*/}
+        {/*state.index == 1  &&*/}
+        {/*state.routes[1] &&*/}
+        {/*state.routes[1].state &&*/}
+        {/*state.routes[1].state.routes &&*/}
+        {/*state.routes[1].state.routes[state.routes[1].state.index].state.index == 1) ? (*/}
+        {/*<MiniPlayer item={props.item} />*/}
+      {/*) : (*/}
+        {/*<View />*/}
+      {/*)}*/}
       <View style={{flexDirection: 'row',
           backgroundColor : '#fff',
            borderTopWidth:1,
@@ -301,43 +301,43 @@ function MainTab() {
             }}
         />
 
-        <Tab.Screen
-        name="Music"
-        component={MusicStack}
-        options={(route) => {
-          return route.route.state &&
-            route.route.state.routes &&
-            route.route.state.routes[1] &&
-            route.route.state.routes[1].params.screen == 'player'
-            ? {tabBarVisible: false}
-            : {
-                tabBarLabel: 'Sản phẩm',
-                tabBarIcon: ({focused, color, size}) => {
-                  analytics().setCurrentScreen(Def.TAB_MUSIC);
-                  if (focused) {
-                    return <MusicIconSelect style={styles.tabBarIconStyle} />;
-                  }
-                  return <MusicIcon style={styles.tabBarIconStyle} />;
-                },
-              };
-        }}
-      />
+        {/*<Tab.Screen*/}
+        {/*name="Music"*/}
+        {/*component={MusicStack}*/}
+        {/*options={(route) => {*/}
+          {/*return route.route.state &&*/}
+            {/*route.route.state.routes &&*/}
+            {/*route.route.state.routes[1] &&*/}
+            {/*route.route.state.routes[1].params.screen == 'player'*/}
+            {/*? {tabBarVisible: false}*/}
+            {/*: {*/}
+                {/*tabBarLabel: 'Sản phẩm',*/}
+                {/*tabBarIcon: ({focused, color, size}) => {*/}
+                  {/*analytics().setCurrentScreen(Def.TAB_MUSIC);*/}
+                  {/*if (focused) {*/}
+                    {/*return <MusicIconSelect style={styles.tabBarIconStyle} />;*/}
+                  {/*}*/}
+                  {/*return <MusicIcon style={styles.tabBarIconStyle} />;*/}
+                {/*},*/}
+              {/*};*/}
+        {/*}}*/}
+      {/*/>*/}
 
 
-      <Tab.Screen
-        name="News"
-        component={NewsStack}
-        options={{
-          tabBarLabel: 'Tin tức',
-          tabBarIcon: ({focused, color, size}) => {
-            analytics().setCurrentScreen(Def.TAB_NEWS);
-            if (focused) {
-              return <NewsIconSelect style={styles.tabBarIconStyle} />;
-            }
-            return <NewsIcon style={styles.tabBarIconStyle} />;
-          },
-        }}
-      />
+      {/*<Tab.Screen*/}
+        {/*name="News"*/}
+        {/*component={NewsStack}*/}
+        {/*options={{*/}
+          {/*tabBarLabel: 'Tin tức',*/}
+          {/*tabBarIcon: ({focused, color, size}) => {*/}
+            {/*analytics().setCurrentScreen(Def.TAB_NEWS);*/}
+            {/*if (focused) {*/}
+              {/*return <NewsIconSelect style={styles.tabBarIconStyle} />;*/}
+            {/*}*/}
+            {/*return <NewsIcon style={styles.tabBarIconStyle} />;*/}
+          {/*},*/}
+        {/*}}*/}
+      {/*/>*/}
 
     </Tab.Navigator>
   );
@@ -468,19 +468,19 @@ function CustomDrawerContent(props) {
           {/*/>*/}
         </View>
       </DrawerContentScrollView>
-      <View
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          padding: 5,
-          paddingLeft: 10,
-          zIndex: 10,
-        }}>
-        <Text style={styles.infoText}>Hotline: (024).38256622</Text>
-        <Text style={styles.infoText}>Email: trungtamkythuatvov@gmail.com</Text>
-        <Text style={styles.infoText}>Website: http://kythuatvov.vn</Text>
-        <Text style={styles.infoText}>Phiên bản 1.0</Text>
-      </View>
+      {/*<View*/}
+        {/*style={{*/}
+          {/*position: 'absolute',*/}
+          {/*bottom: 0,*/}
+          {/*padding: 5,*/}
+          {/*paddingLeft: 10,*/}
+          {/*zIndex: 10,*/}
+        {/*}}>*/}
+        {/*<Text style={styles.infoText}>Hotline: (024).38256622</Text>*/}
+        {/*<Text style={styles.infoText}>Email: trungtamkythuatvov@gmail.com</Text>*/}
+        {/*<Text style={styles.infoText}>Website: http://kythuatvov.vn</Text>*/}
+        {/*<Text style={styles.infoText}>Phiên bản 1.0</Text>*/}
+      {/*</View>*/}
     </View>
   );
 }
@@ -879,29 +879,29 @@ export default class App extends Component {
     return (
       <NavigationContainer>
           <StatusBar backgroundColor={Style.DEFAUT_RED_COLOR} />
-        <Video
-          ref={(ref) => {
-            this.player = ref;
-          }}
-          resizeMode={'contain'}
-          style={{
-            aspectRatio: 1,
-            width: '0%',
-            borderWidth: 0
-          }}
-          //controls={true}
-          paused={this.state.paused}
-          source={{uri: this.state.url}}
-          shouldPlay
-          //useNativeControls
-          playWhenInactive={true}
-          playInBackground={true}
-          onProgress={this.onProgress}
-          onBuffer={this.onBuffer}                // Callback when remote video is buffering
-          onError={this.videoError}               // Callback when video cannot be loaded
-          onAudioFocusChanged={this.onAudioFocusChanged}
-          disableFocus={false}
-        />
+        {/*<Video*/}
+          {/*ref={(ref) => {*/}
+            {/*this.player = ref;*/}
+          {/*}}*/}
+          {/*resizeMode={'contain'}*/}
+          {/*style={{*/}
+            {/*aspectRatio: 1,*/}
+            {/*width: '0%',*/}
+            {/*borderWidth: 0*/}
+          {/*}}*/}
+          {/*//controls={true}*/}
+          {/*paused={this.state.paused}*/}
+          {/*source={{uri: this.state.url}}*/}
+          {/*shouldPlay*/}
+          {/*//useNativeControls*/}
+          {/*playWhenInactive={true}*/}
+          {/*playInBackground={true}*/}
+          {/*onProgress={this.onProgress}*/}
+          {/*onBuffer={this.onBuffer}                // Callback when remote video is buffering*/}
+          {/*onError={this.videoError}               // Callback when video cannot be loaded*/}
+          {/*onAudioFocusChanged={this.onAudioFocusChanged}*/}
+          {/*disableFocus={false}*/}
+        {/*/>*/}
         <AppDrawer />
       </NavigationContainer>
     );
